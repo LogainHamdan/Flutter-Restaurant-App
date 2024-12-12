@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-class Constants{
 
-  static String appName = "Restaurant App UI KIT";
+class Constants {
+  static String appName = "Restaurant App";
 
   //Colors for theme
 //  Color(0xfffcfcff);
@@ -12,49 +12,48 @@ class Constants{
   static Color lightBG = Color(0xfffcfcff);
   static Color darkBG = Colors.black;
   static Color ratingBG = Colors.yellow[600]!;
+  static String fontFamily = 'frank';
 
   static ThemeData lightTheme = ThemeData(
-
+    fontFamily: fontFamily,
+    // Apply font globally
     textTheme: TextTheme(
-      titleMedium:TextStyle(
+      bodyLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.normal),
+      bodyMedium: TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal),
+      bodySmall: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal),
+      titleMedium: TextStyle(
         color: darkBG,
         fontSize: 18.0,
         fontWeight: FontWeight.w800,
-      ) ,
+      ),
+      labelLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
     ),
-    // backgroundColor: lightBG,
     primaryColor: lightPrimary,
-    // accentColor:  lightAccent,
-    // cursorColor: lightAccent,
     scaffoldBackgroundColor: lightBG,
     appBarTheme: AppBarTheme(
       backgroundColor: lightBG,
-//      iconTheme: IconThemeData(
-//        color: lightAccent,
-//      ),
     ),
   );
 
   static ThemeData darkTheme = ThemeData(
+    fontFamily: fontFamily,
+    // Apply font globally
     textTheme: TextTheme(
+      bodyLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.normal),
+      bodyMedium: TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal),
+      bodySmall: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal),
       titleMedium: TextStyle(
         color: lightBG,
         fontSize: 18.0,
         fontWeight: FontWeight.w800,
       ),
+      labelLarge: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
     ),
     brightness: Brightness.dark,
     primaryColor: darkPrimary,
-    // accentColor: darkAccent,
     scaffoldBackgroundColor: darkBG,
-    // cursorColor: darkAccent,
     appBarTheme: AppBarTheme(
       backgroundColor: darkBG,
-//      iconTheme: IconThemeData(
-//        color: darkAccent,
-//      ),
     ),
   );
-
-
 }

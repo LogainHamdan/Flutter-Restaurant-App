@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../providers/login_provider.dart';
+import '../widgets/build_text_field.dart';
+import '../widgets/mthods_row.dart';
 import 'main_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -30,20 +32,19 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30.0),
-          _buildTextField(
-            context,
-            controller: loginProvider.usernameController,
-            hintText: "Username",
-            icon: Icons.perm_identity,
-          ),
+          build_text_field(
+              context: context,
+              controller: loginProvider.usernameController,
+              hintText: "Username",
+              icon: Icons.perm_identity,
+              isPassword: false),
           SizedBox(height: 10.0),
-          _buildTextField(
-            context,
-            controller: loginProvider.passwordController,
-            hintText: "Password",
-            icon: Icons.lock_outline,
-            isPassword: true,
-          ),
+          build_text_field(
+              context: context,
+              controller: loginProvider.passwordController,
+              hintText: "Password",
+              icon: Icons.lock_outline,
+              isPassword: true),
           SizedBox(height: 10.0),
           Container(
             alignment: Alignment.centerRight,
@@ -65,7 +66,8 @@ class LoginScreen extends StatelessWidget {
             child: ElevatedButton(
               child: Text(
                 "LOGIN".toUpperCase(),
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w100),
               ),
               onPressed: () => loginProvider.login(context),
               style: ButtonStyle(
@@ -79,87 +81,11 @@ class LoginScreen extends StatelessWidget {
           Center(
             child: Container(
               width: MediaQuery.of(context).size.width / 2,
-              child: Row(
-                children: <Widget>[
-                  RawMaterialButton(
-                    onPressed: () {},
-                    fillColor: Colors.blue[800],
-                    shape: CircleBorder(),
-                    elevation: 4.0,
-                    child: Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Icon(
-                        FontAwesomeIcons.facebookF,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  RawMaterialButton(
-                    onPressed: () {},
-                    fillColor: Colors.white,
-                    shape: CircleBorder(),
-                    elevation: 4.0,
-                    child: Padding(
-                      padding: EdgeInsets.all(15),
-                      child: Icon(
-                        FontAwesomeIcons.google,
-                        color: Colors.blue[800],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: MethodsRow(),
             ),
           ),
           SizedBox(height: 20.0),
         ],
-      ),
-    );
-  }
-
-  Widget _buildTextField(
-    BuildContext context, {
-    required TextEditingController controller,
-    required String hintText,
-    required IconData icon,
-    bool isPassword = false,
-  }) {
-    return Card(
-      elevation: 3.0,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
-        ),
-        child: TextField(
-          style: TextStyle(
-            fontSize: 15.0,
-            color: Colors.black,
-          ),
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.all(10.0),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(5.0),
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-              borderRadius: BorderRadius.circular(5.0),
-            ),
-            hintText: hintText,
-            hintStyle: TextStyle(
-              fontSize: 15.0,
-              color: Colors.black,
-            ),
-            prefixIcon: Icon(
-              icon,
-              color: Colors.black,
-            ),
-          ),
-          obscureText: isPassword,
-          maxLines: 1,
-          controller: controller,
-        ),
       ),
     );
   }

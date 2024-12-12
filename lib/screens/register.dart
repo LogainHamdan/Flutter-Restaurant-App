@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../providers/register_provider.dart';
+import '../widgets/mthods_row.dart';
 import 'main_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -55,7 +56,8 @@ class RegisterScreen extends StatelessWidget {
             child: ElevatedButton(
               child: Text(
                 "Register".toUpperCase(),
-                style: TextStyle(color: Colors.white),
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.w100),
               ),
               onPressed: () {
                 registerProvider.register();
@@ -71,7 +73,7 @@ class RegisterScreen extends StatelessWidget {
           SizedBox(height: 10.0),
           Divider(color: Theme.of(context).colorScheme.secondary),
           SizedBox(height: 10.0),
-          buildSocialLoginButtons(context),
+          MethodsRow(),
         ],
       ),
     );
@@ -87,7 +89,7 @@ class RegisterScreen extends StatelessWidget {
     return Card(
       elevation: 3.0,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(5.0)),
         ),
@@ -110,6 +112,7 @@ class RegisterScreen extends StatelessWidget {
               color: Colors.black,
             ),
             hintStyle: TextStyle(
+              fontWeight: FontWeight.w100,
               fontSize: 15.0,
               color: Colors.black,
             ),
@@ -121,42 +124,12 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 
-  Widget buildSocialLoginButtons(BuildContext context) {
-    return Center(
-      child: Container(
-        width: MediaQuery.of(context).size.width / 2,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            RawMaterialButton(
-              onPressed: () {},
-              fillColor: Colors.blue[800],
-              shape: CircleBorder(),
-              elevation: 4.0,
-              child: Padding(
-                padding: EdgeInsets.all(15),
-                child: Icon(
-                  FontAwesomeIcons.facebookF,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            RawMaterialButton(
-              onPressed: () {},
-              fillColor: Colors.white,
-              shape: CircleBorder(),
-              elevation: 4.0,
-              child: Padding(
-                padding: EdgeInsets.all(15),
-                child: Icon(
-                  FontAwesomeIcons.google,
-                  color: Colors.blue[800],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  // Widget buildSocialLoginButtons(BuildContext context) {
+  //   return Center(
+  //     child: Container(
+  //       width: MediaQuery.of(context).size.width / 2,
+  //       child: MethodsRow(),
+  //     ),
+  //   );
+  // }
 }

@@ -25,6 +25,10 @@ class RegisterProvider with ChangeNotifier {
   String get username => _username;
   String get email => _email;
   String get password => _password;
+  // String get username=> _username;
+  // String get email => _email;
+  // String get password => _password;
+  // String get
 
   void register() {
     // You can add registration logic here

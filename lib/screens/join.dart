@@ -52,11 +52,13 @@ class _JoinAppScreenState extends State<_JoinAppScreen>
           unselectedLabelColor: Colors.grey,
           labelStyle: TextStyle(
             fontSize: 20.0,
-            fontWeight: FontWeight.w800,
+            fontFamily: 'frank',
+            // fontWeight: FontWeight.w800,
           ),
           unselectedLabelStyle: TextStyle(
+            fontFamily: 'frank',
             fontSize: 20.0,
-            fontWeight: FontWeight.w800,
+            // fontWeight: FontWeight.w800,
           ),
           tabs: <Widget>[
             Tab(

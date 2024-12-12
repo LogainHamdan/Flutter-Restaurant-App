@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             navigatorKey: appProvider.navigatorKey,
             title: Constants.appName,
-            theme: appProvider.theme,
+            theme: Constants.lightTheme,
             darkTheme: Constants.darkTheme,
             home: SplashScreen(),
           ),
