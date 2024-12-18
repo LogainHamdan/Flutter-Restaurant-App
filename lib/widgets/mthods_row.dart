@@ -17,14 +17,14 @@ class MethodsRow extends StatelessWidget {
             Flexible(
               child: RawMaterialButton(
                 onPressed: () {},
-                fillColor: Colors.blue[800],
+                fillColor: Colors.white,
                 shape: CircleBorder(),
-                elevation: 4.0,
+                elevation: 2.0,
                 child: Padding(
                   padding: EdgeInsets.all(15),
                   child: Icon(
                     FontAwesomeIcons.facebookF,
-                    color: Colors.white,
+                    color: Colors.blue[800],
                   ),
                 ),
               ),

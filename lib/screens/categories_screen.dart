@@ -13,6 +13,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple[400],
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: IconButton(

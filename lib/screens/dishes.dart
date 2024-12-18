@@ -13,6 +13,7 @@ class DishesScreen extends StatelessWidget {
     final foodProvider = Provider.of<DishesProvider>(context);
 
     return Scaffold(
+      backgroundColor: Colors.deepPurple[400],
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: IconButton(

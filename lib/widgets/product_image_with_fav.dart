@@ -15,7 +15,7 @@ class ProductImageWithFavorite extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(8.0),
           child: Image.asset(
-            "assets/food1.jpg", // Adjust this to dynamic image path
+            "assets/imgs/food1.jpeg", // Adjust this to dynamic image path
             fit: BoxFit.cover,
           ),
         ),

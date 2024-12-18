@@ -16,6 +16,7 @@ class Home extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => HomeProvider(),
       child: Scaffold(
+        backgroundColor: Colors.deepPurple[400],
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: ListView(
@@ -134,7 +135,7 @@ class Home extends StatelessWidget {
                   crossAxisCount: 2,
                   childAspectRatio: 0.7,
                 ),
-                itemCount: foods?.length ?? 0,
+                itemCount: foods.length ?? 0,
                 itemBuilder: (BuildContext context, int index) {
                   final Map food = foods[index];
                   return GridProduct(

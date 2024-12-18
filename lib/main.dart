@@ -19,6 +19,7 @@ import 'package:restaurant/providers/tab_controller_provider.dart';
 import 'package:restaurant/providers/walkthrough_provider.dart';
 import 'package:restaurant/screens/home.dart';
 import 'package:restaurant/screens/splash.dart';
+import 'package:restaurant/screens/walkthrough.dart';
 
 import 'util/const.dart';
 
@@ -56,11 +57,19 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => RegisterProvider()),
             ChangeNotifierProvider(create: (_) => SearchProvider()),
             ChangeNotifierProvider(create: (_) => SplashProvider()),
+            // ChangeNotifierProvider(create: (_)=> SplashScreen)
             // ChangeNotifierProvider(
             //     create: (_) => TabControllerProvider(vsync: null)),
             ChangeNotifierProvider(create: (_) => WalkthroughProvider()),
           ],
           child: MaterialApp(
+            // initialRoute: '/',
+            // routes: {
+            //   '/': (context) => SplashScreen(),
+            //   '/walkthrough': (context) => Walkthrough(),
+            //   '/home': (context) =>
+            //       Home(), // Replace with your home screen widget
+            // },
             key: appProvider.key,
             debugShowCheckedModeBanner: false,
             navigatorKey: appProvider.navigatorKey,

@@ -1,91 +1,96 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
-import '../providers/login_provider.dart';
-import '../widgets/build_text_field.dart';
-import '../widgets/mthods_row.dart';
-import 'main_screen.dart';
+import 'package:restaurant/screens/register.dart';
+import '../widgets/custom_elevated_button.dart';
+import '../widgets/custom_textform_field.dart';
+import 'home.dart';
 
-class LoginScreen extends StatelessWidget {
+class Login extends StatefulWidget {
+  static const String id = '/login';
+  final int selectedTab;
+
+  const Login({super.key, required this.selectedTab});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  late TextEditingController emailController;
+  late TextEditingController passController;
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController();
+    passController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final loginProvider = Provider.of<LoginProvider>(context);
-
-    return Padding(
-      padding: EdgeInsets.fromLTRB(20.0, 0, 20, 0),
-      child: ListView(
-        shrinkWrap: true,
-        children: <Widget>[
-          SizedBox(height: 10.0),
-          Container(
-            alignment: Alignment.center,
-            margin: EdgeInsets.only(
-              top: 25.0,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 80.0),
+        child: Column(
+          children: [
+            SizedBox(height: 20),
+            customTextFormField(
+              controller: emailController,
+              labelText: 'Email Address',
+              keyboardType: TextInputType.emailAddress,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please Enter Your Email Address';
+                } else if (!EmailValidator.validate(value)) {
+                  return 'Please Enter a valid Email';
+                }
+                return null;
+              },
             ),
-            child: Text(
-              "Log in to your account",
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.w700,
-                color: Theme.of(context).colorScheme.secondary,
-              ),
+            const SizedBox(height: 15),
+            customTextFormField(
+              controller: passController,
+              labelText: 'Password',
+              obscureText: true,
             ),
-          ),
-          SizedBox(height: 30.0),
-          build_text_field(
-              context: context,
-              controller: loginProvider.usernameController,
-              hintText: "Username",
-              icon: Icons.perm_identity,
-              isPassword: false),
-          SizedBox(height: 10.0),
-          build_text_field(
-              context: context,
-              controller: loginProvider.passwordController,
-              hintText: "Password",
-              icon: Icons.lock_outline,
-              isPassword: true),
-          SizedBox(height: 10.0),
-          Container(
-            alignment: Alignment.centerRight,
-            child: ElevatedButton(
-              child: Text(
-                "Forgot Password?",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.w500,
-                  color: Theme.of(context).colorScheme.secondary,
-                ),
-              ),
-              onPressed: () {},
+            const SizedBox(height: 20),
+            customElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+              },
+              text: 'Login',
             ),
-          ),
-          SizedBox(height: 30.0),
-          Container(
-            height: 50.0,
-            child: ElevatedButton(
-              child: Text(
-                "LOGIN".toUpperCase(),
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.w100),
-              ),
-              onPressed: () => loginProvider.login(context),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.black),
-              ),
-            ),
-          ),
-          SizedBox(height: 10.0),
-          Divider(color: Theme.of(context).colorScheme.secondary),
-          SizedBox(height: 10.0),
-          Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width / 2,
-              child: MethodsRow(),
-            ),
-          ),
-          SizedBox(height: 20.0),
-        ],
+            SizedBox(height: 20),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MaterialApp(
+                                home: Scaffold(
+                                  body: Register(
+                                    selectedTab: 0,
+                                  ),
+                                ),
+                              )));
+                },
+                child: Text(
+                  'Create an account',
+                  style: TextStyle(
+                      color: Colors.black.withOpacity(0.4),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15),
+                ))
+          ],
+        ),
       ),
     );
   }

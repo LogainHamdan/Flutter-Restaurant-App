@@ -9,81 +9,52 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564134ea-fe44-4c66-8e5d-cb096279b79b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/FrankRuhlLibre-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/PayPal.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/bank-e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/cards.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/google.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imgs/insta.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/build_text_field.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/mthods_row.dart" afterDir="false" />
+    <list default="true" id="564134ea-fe44-4c66-8e5d-cb096279b79b" name="Changes" comment="splash screens editions">
+      <change afterPath="$PROJECT_DIR$/lib/screens/bottom_navigation.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/custom_elevated_button.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/custom_textform_field.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/navigation_item.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Affiliation Database" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Affiliation Database" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/Affiliation Database-journal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOCK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/AutofillStrikeDatabase/LOG.old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/chrome-device/Default/BrowsingTopicsSiteData-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/dartpad/web_plugin_registrant.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cc.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/cc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cm1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/cm1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cm2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/cm2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cm3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/cm3.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/cm4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/cm4.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food10.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food10.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food11.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food11.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food3.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food4.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food4.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food5.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food5.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food6.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food6.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food7.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food7.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food8.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food8.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/food9.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/food9.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/on1.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/on1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/on2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/on2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/on3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imgs/on3.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/f872507f30e2ff2523f0f1d19160266e.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.bin.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/FontManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/FontManifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/cc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/cm1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/cm2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/cm3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/cm4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food10.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food11.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/food9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/on1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/on2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/on3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/NOTICES" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/NOTICES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/app_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/app_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/providers/register_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/register_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/providers/walkthrough_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/providers/walkthrough_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/categories_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/categories_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/checkout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/checkout.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/dishes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/dishes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/favorite_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/favorite_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/join.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/join.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/main_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/main_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/splash.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/splash.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/walkthrough.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/walkthrough.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/util/const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util/const.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/util/comments.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util/comments.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/util/foods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/util/foods.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/badge.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/badge.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/mthods_row.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/mthods_row.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/product_image_with_fav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/product_image_with_fav.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +69,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -109,25 +81,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "D:/Logein/restaurant/assets/imgs",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Logein/restaurant/lib/screens&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Logein\restaurant\lib\screens" />
+      <recent name="D:\Logein\restaurant\lib\widgets" />
       <recent name="D:\Logein\restaurant\assets\imgs" />
       <recent name="D:\Logein\restaurant\assets\fonts" />
       <recent name="D:\Logein\restaurant\assets" />
-      <recent name="D:\Logein\restaurant" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Logein\restaurant\assets\imgs" />
@@ -148,6 +121,14 @@
       <option name="presentableId" value="Default" />
       <updated>1733813281218</updated>
     </task>
+    <task id="LOCAL-00001" summary="splash screens editions">
+      <created>1733993315286</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733993315296</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,5 +141,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="splash screens editions" />
+    <option name="LAST_COMMIT_MESSAGE" value="splash screens editions" />
   </component>
 </project>

@@ -19,6 +19,7 @@ class MainScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
+        backgroundColor: Colors.deepPurple[400],
         appBar: AppBar(
           automaticallyImplyLeading: false,
           centerTitle: true,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../providers/walkthrough_provider.dart';
+import 'package:restaurant/screens/join.dart';
 
 class Walkthrough extends StatelessWidget {
   final List<Map<String, dynamic>> pageInfos = [
@@ -24,21 +23,23 @@ class Walkthrough extends StatelessWidget {
     return WillPopScope(
       onWillPop: () => Future.value(false),
       child: Scaffold(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.deepPurple[400], // Custom branding color
         body: Padding(
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
               Expanded(
                 child: PageView.builder(
                   controller: pageController,
-                  itemCount:
-                      pageInfos.length + 1, // Add one for the third screen
+                  itemCount: pageInfos.length +
+                      2, // One extra for third screen and final page
                   itemBuilder: (context, index) {
                     if (index < pageInfos.length) {
                       return _buildPageModel(pageInfos[index], context);
+                    } else if (index == pageInfos.length) {
+                      return _buildPageModel2(context); // Third page screen
                     } else {
-                      return _buildPageModel2(context);
+                      return _buildFinalPage(context); // Final page
                     }
                   },
                 ),
@@ -56,26 +57,151 @@ class Walkthrough extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Image.asset(
-          item['img'],
-          height: 185.0,
+        // Image with zoom effect
+        AnimatedOpacity(
+          opacity: 1.0,
+          duration: Duration(seconds: 2),
+          child: AnimatedScale(
+            scale: 1.3,
+            duration: Duration(seconds: 2),
+            child: Image.asset(
+              item['img'],
+              height: 180.0,
+            ),
+          ),
         ),
         SizedBox(height: 30),
-        Text(
-          item['title'],
-          style: TextStyle(
-            fontSize: 28.0,
-            fontWeight: FontWeight.w600,
-            color: Theme.of(context).colorScheme.secondary,
+        // Title with animation
+        AnimatedOpacity(
+          opacity: 1.0,
+          duration: Duration(seconds: 2),
+          child: Text(
+            item['title'],
+            style: TextStyle(
+              fontSize: 28.0,
+              fontWeight: FontWeight.w600,
+              color: Colors.white70,
+            ),
           ),
         ),
         SizedBox(height: 20),
-        Text(
-          item['body'],
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 15.0),
+        // Description with animation
+        AnimatedOpacity(
+          opacity: 1.0,
+          duration: Duration(seconds: 2),
+          child: Text(
+            item['body'],
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 16.0, color: Colors.white70),
+          ),
         ),
       ],
+    );
+  }
+
+  Widget _buildFinalPage(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AnimatedOpacity(
+            opacity: 1.0,
+            duration: Duration(seconds: 2),
+            child: Text(
+              'Get Started Now!',
+              style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.w600,
+                color: Colors.white70,
+              ),
+            ),
+          ),
+          SizedBox(height: 30),
+          // Button with fade-in effect
+          AnimatedOpacity(
+            opacity: 1.0,
+            duration: Duration(seconds: 2),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+              onPressed: () {
+                // Navigate to the home or main screen
+                Navigator.of(context).push(_createRoute());
+              },
+              child: Text('Get Started'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildNavigationControls(
+      BuildContext context, PageController pageController) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        // Skip button with fade effect
+        AnimatedOpacity(
+          opacity: 1.0,
+          duration: Duration(seconds: 2),
+          child: TextButton(
+            onPressed: () {
+              Navigator.of(context).push(_createRoute());
+            },
+            child: Text("Skip", style: TextStyle(color: Colors.white70)),
+          ),
+        ),
+        // Next button with fade effect
+        AnimatedOpacity(
+          opacity: 1.0,
+          duration: Duration(seconds: 2),
+          child: TextButton(
+            onPressed: () {
+              if (pageController.page == pageInfos.length + 1) {
+                // Transition animation when reaching the final page
+                Navigator.of(context).push(_createRoute());
+              } else {
+                pageController.nextPage(
+                  duration: Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
+              }
+            },
+            child: Text(
+              "Next",
+              style: TextStyle(
+                fontWeight: FontWeight.w800,
+                color: Colors.white70,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+  PageRouteBuilder _createPageRoute(Widget page) {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => page,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0); // Start from below
+        var end = Offset.zero; // End at the current position
+        var curve = Curves.easeInOut;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+        var offsetAnimation = animation.drive(tween);
+
+        return SlideTransition(position: offsetAnimation, child: child);
+      },
+    );
+  }
+
+  Route _createRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => JoinScreen(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return child;
+      },
     );
   }
 
@@ -89,29 +215,50 @@ class Walkthrough extends StatelessWidget {
             SizedBox(
               height: 35,
             ),
-            Image(
-              image: AssetImage('assets/imgs/on3.jpeg'),
-              height: 185,
+            // Animated image with zoom effect
+            AnimatedOpacity(
+              opacity: 1.0,
+              duration: Duration(seconds: 2),
+              child: AnimatedScale(
+                scale: 1.5, // Increased scale for animation
+                duration: Duration(seconds: 3),
+                child: Image.asset(
+                  'assets/imgs/on3.jpeg',
+                  height: 200.0, // You can increase the height for bigger view
+                ),
+              ),
             ),
+
             SizedBox(height: 60),
-            Text(
-              'Easy Payment',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 28,
-                color: Theme.of(context).colorScheme.secondary,
+            // Title
+            AnimatedOpacity(
+              opacity: 1.0,
+              duration: Duration(seconds: 2),
+              child: Text(
+                'Easy Payment',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white70,
+                ),
               ),
             ),
             SizedBox(height: 30),
-            Text(
-              'Fast, secure, and flexible payment methods: ',
-              style: TextStyle(
-                  fontSize: 20.0,
-                  color: Theme.of(context).colorScheme.secondary),
+            // Description
+            AnimatedOpacity(
+              opacity: 1.0,
+              duration: Duration(seconds: 2),
+              child: Text(
+                'Fast, secure, and flexible payment methods: ',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16.0, color: Colors.white70),
+              ),
             ),
             SizedBox(height: 60),
+            // Payment method images in row
             SizedBox(
-              height: 100, // Define a fixed height
+              height: 100, // Define a fixed height for the row
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -141,42 +288,6 @@ class Walkthrough extends StatelessWidget {
             ),
           ],
         )
-      ],
-    );
-  }
-
-  Widget _buildNavigationControls(
-      BuildContext context, PageController pageController) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        TextButton(
-          onPressed: () {
-            Provider.of<WalkthroughProvider>(context, listen: false)
-                .navigateToJoin(context);
-          },
-          child: Text("Skip"),
-        ),
-        TextButton(
-          onPressed: () async {
-            if (pageController.page == pageInfos.length) {
-              Provider.of<WalkthroughProvider>(context, listen: false)
-                  .navigateToJoin(context);
-            } else {
-              pageController.nextPage(
-                duration: Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
-            }
-          },
-          child: Text(
-            "Next",
-            style: TextStyle(
-              fontWeight: FontWeight.w800,
-              color: Theme.of(context).colorScheme.secondary,
-            ),
-          ),
-        ),
       ],
     );
   }
